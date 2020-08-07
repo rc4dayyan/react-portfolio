@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live Preview
+[https://rc4dayyan.github.io/react-portfolio](https://rc4dayyan.github.io/react-portfolio)
+
 ## Available Scripts
 
 In the project directory, you can run:
