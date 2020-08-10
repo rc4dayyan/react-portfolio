@@ -27,7 +27,7 @@ const Skills = ({portfolioData}) => {
                         portfolioData.skills.programLanguage && portfolioData.skills.programLanguage
                         .map((lang, index)=>{
                             return (
-                                <li className="list-inline-item"><i className={"fab "+ lang.classname}></i></li>
+                                <li key={index} className="list-inline-item"><i className={"fab "+ lang.classname}></i></li>
                             )
                         })
                     }

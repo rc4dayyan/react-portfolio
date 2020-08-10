@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import portfolioData from './portfolioData';
 import MenuNavbar from './components/MenuNavbar';
@@ -6,50 +6,27 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaBars, FaHeart } from 'react-icons/fa';
+
 
 function App() {
 
-    useEffect(() => {
-        const $ = window.$;
-        // Smooth scrolling using jQuery easing
-        $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-            if (
-                window.location.pathname.replace(/^\//, "") ===
-                    this.pathname.replace(/^\//, "") &&
-                window.location.hostname === this.hostname
-            ) {
-                var target = $(this.hash);
-                target = target.length
-                    ? target
-                    : $("[name=" + this.hash.slice(1) + "]");
-                if (target.length) {
-                    $("html, body").animate(
-                        {
-                            scrollTop: target.offset().top,
-                        },
-                        1000,
-                        "easeInOutExpo"
-                    );
-                    return false;
-                }
-            }
-        });
+    const [toggled, setToggled] = useState(false);
 
-        // Closes responsive menu when a scroll trigger link is clicked
-        $(".js-scroll-trigger").click(function () {
-            $(".navbar-collapse").collapse("hide");
-        });
+    const handleToggleSidebar = (value) => {
+        setToggled(value);
+    };
 
-        // Activate scrollspy to add active class to navbar items on scroll
-        $("body").scrollspy({
-            target: "#sideNav",
-        });
-    }, [])
   return (
-    <div className="App">
-        <MenuNavbar portfolioData={portfolioData} />
+    <div className="app">
+        
+        <MenuNavbar toggled={toggled} handleToggleSidebar={handleToggleSidebar} />
 
-        <div className="container-fluid p-0">
+        <main>
+            <div className="btn-toggle" onClick={()=>handleToggleSidebar(!toggled)}>
+                <FaBars />
+            </div>
             {/* About */}
             <About portfolioData={portfolioData} />
             <hr className="m-0" />
@@ -64,8 +41,17 @@ function App() {
             
             {/* Skills */}
             <Skills portfolioData={portfolioData} />
-        
-        </div>
+
+
+            <footer>
+                <small>
+                © 2020 made with <FaHeart style={{ color: 'red' }} /> by -{' '}
+                <a target="_blank" rel="noopener noreferrer" href="#!">
+                    me
+                </a>
+                </small>
+            </footer>
+        </main>
     </div>
   );
 }

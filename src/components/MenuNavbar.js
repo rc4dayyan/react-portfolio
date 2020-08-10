@@ -1,22 +1,92 @@
-import React from 'react';
+import React from 'react'
+import { ProSidebar, Menu, MenuItem, SidebarHeader, SidebarContent, SidebarFooter } from 'react-pro-sidebar';
+import 'react-pro-sidebar/dist/css/styles.css';
+import { FaGem, FaGithub } from 'react-icons/fa';
+import {Link} from 'react-scroll';
+import sidebarBg from './../assets/navbg.jpg';
 
-const MenuNavbar = ({portfolioData}) => {
+const MenuNavbar = ({toggled, handleToggleSidebar}) => {
+    
     return ( 
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a className="navbar-brand js-scroll-trigger" href="#page-top">
-                <span className="d-block d-lg-none">{portfolioData.firstname + portfolioData.lastname}</span>
-                <span className="d-none d-lg-block"><img className="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.png" alt="" /></span>
-            </a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav">
-                    <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                </ul>
+        <ProSidebar image={sidebarBg} className="md" toggled={toggled} onToggle={handleToggleSidebar}>
+            <div id="sideNav">
+                <SidebarHeader style={{height:'auto', padding: '20px'}}>
+                    <div
+                        style={{
+                            padding: '0 24px',
+                            textTransform: 'uppercase',
+                            fontWeight: 'bold',
+                            fontSize: 14,
+                            letterSpacing: '1px',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap',
+                        }}
+                        >
+                            <img className="img-profile rounded-circle mx-auto mb-2" src="img/profile.png" alt="" />
+                    </div>
+                </SidebarHeader>
+                <SidebarContent>
+                    <Menu iconShape="square">
+                        <MenuItem icon={<FaGem />}>
+                            <Link
+                                activeClass="active"
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration= {500}
+                            >About</Link>
+                        </MenuItem>
+                        <MenuItem icon={<FaGem />}>
+                            <Link
+                                activeClass="active"
+                                to="experience"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration= {500}
+                            >Experience</Link>
+                        </MenuItem>
+                        <MenuItem icon={<FaGem />}>
+                            <Link
+                                activeClass="active"
+                                to="education"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration= {500}
+                            >Education</Link>
+                        </MenuItem>
+                        <MenuItem icon={<FaGem />}>
+                            <Link
+                                activeClass="active"
+                                to="skills"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration= {500}
+                            >Skills</Link>
+                        </MenuItem>
+                    </Menu>
+                </SidebarContent>
+                <SidebarFooter style={{ textAlign: 'center' }}>
+                    <div className="sidebar-btn-wrapper">
+                    <a
+                        href="https://github.com"
+                        target="_blank"
+                        className="sidebar-btn"
+                        rel="noopener noreferrer"
+                    >
+                        <FaGithub />
+                        <span> with love</span>
+                    </a>
+                    </div>
+                </SidebarFooter>
+        
             </div>
-        </nav>
+        </ProSidebar>
+        
      )
 }
  
