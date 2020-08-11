@@ -8,7 +8,7 @@ import Education from './components/Education';
 import Skills from './components/Skills';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaBars, FaHeart } from 'react-icons/fa';
-
+import Works from './components/Works';
 
 function App() {
 
@@ -41,6 +41,10 @@ function App() {
             
             {/* Skills */}
             <Skills portfolioData={portfolioData} />
+            <hr className="m-0" />
+
+            {/* work */}
+            <Works portfolioData={portfolioData} />
 
 
             <footer>

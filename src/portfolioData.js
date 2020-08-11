@@ -123,7 +123,45 @@ let portfolioData = {
                 "desc": "Agile Development & Scrum"
             }
         ]
-    }
+    },
+    "works":[
+        {
+            "title": "Project 1",
+            "tech": "Html, CSS, Javascript",
+            "img": "1.jpg",
+            "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure fugit voluptates debitis culpa voluptatem. Perferendis labore inventore neque, velit provident natus quasi ea est consequuntur atque optio mollitia autem itaque."
+        },
+        {
+            "title": "Project 2",
+            "tech": "Html, CSS, React",
+            "img": "2.jpg",
+            "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure fugit voluptates debitis culpa voluptatem. Perferendis labore inventore neque, velit provident natus quasi ea est consequuntur atque optio mollitia autem itaque."
+        },
+        {
+            "title": "Project 3",
+            "tech": "Html, CSS, PHP",
+            "img": "3.jpg",
+            "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure fugit voluptates debitis culpa voluptatem. Perferendis labore inventore neque, velit provident natus quasi ea est consequuntur atque optio mollitia autem itaque."
+        },
+        {
+            "title": "Project 4",
+            "tech": "Html, CSS, PHP",
+            "img": "4.jpg",
+            "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure fugit voluptates debitis culpa voluptatem. Perferendis labore inventore neque, velit provident natus quasi ea est consequuntur atque optio mollitia autem itaque."
+        },
+        {
+            "title": "Project 5",
+            "tech": "Html, CSS, PHP",
+            "img": "5.jpg",
+            "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure fugit voluptates debitis culpa voluptatem. Perferendis labore inventore neque, velit provident natus quasi ea est consequuntur atque optio mollitia autem itaque."
+        },
+        {
+            "title": "Project 6",
+            "tech": "Html, CSS, PHP",
+            "img": "6.jpg",
+            "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure fugit voluptates debitis culpa voluptatem. Perferendis labore inventore neque, velit provident natus quasi ea est consequuntur atque optio mollitia autem itaque."
+        }
+    ],
   }
   
   export default portfolioData

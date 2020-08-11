@@ -34,7 +34,7 @@ const MenuNavbar = ({toggled, handleToggleSidebar}) => {
                                 to="about"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
+                                offset={0}
                                 duration= {500}
                             >About</Link>
                         </MenuItem>
@@ -44,7 +44,7 @@ const MenuNavbar = ({toggled, handleToggleSidebar}) => {
                                 to="experience"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
+                                offset={0}
                                 duration= {500}
                             >Experience</Link>
                         </MenuItem>
@@ -54,7 +54,7 @@ const MenuNavbar = ({toggled, handleToggleSidebar}) => {
                                 to="education"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
+                                offset={0}
                                 duration= {500}
                             >Education</Link>
                         </MenuItem>
@@ -64,9 +64,19 @@ const MenuNavbar = ({toggled, handleToggleSidebar}) => {
                                 to="skills"
                                 spy={true}
                                 smooth={true}
-                                offset={-70}
+                                offset={0}
                                 duration= {500}
                             >Skills</Link>
+                        </MenuItem>
+                        <MenuItem icon={<FaGem />}>
+                            <Link
+                                activeClass="active"
+                                to="works"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration= {500}
+                            >Works</Link>
                         </MenuItem>
                     </Menu>
                 </SidebarContent>
