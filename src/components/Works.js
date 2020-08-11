@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {Card, Button, Container, Row, Col} from 'react-bootstrap'
 import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
@@ -23,9 +23,6 @@ const Works = ({portfolioData}) => {
         setPhotoIndex(index);
         setIsOpen(true);
     }
-    useEffect(() => {
-        console.log(images[photoIndex]["img"]);
-    }, [])
     return ( 
         <section className="resume-section" id="works">
             <div className="resume-section-content">
