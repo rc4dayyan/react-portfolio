@@ -11,19 +11,8 @@ const MenuNavbar = ({toggled, handleToggleSidebar}) => {
         <ProSidebar image={sidebarBg} className="md" toggled={toggled} onToggle={handleToggleSidebar}>
             <div id="sideNav">
                 <SidebarHeader style={{height:'auto', padding: '20px'}}>
-                    <div
-                        style={{
-                            padding: '0 24px',
-                            textTransform: 'uppercase',
-                            fontWeight: 'bold',
-                            fontSize: 14,
-                            letterSpacing: '1px',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            whiteSpace: 'nowrap',
-                        }}
-                        >
-                            <img className="img-profile rounded-circle mx-auto mb-2" src="img/profile.png" alt="" />
+                    <div className="img-section">
+                        <img className="img-profile rounded-circle mx-auto mb-2" src="img/profile.png" alt="" />
                     </div>
                 </SidebarHeader>
                 <SidebarContent>
@@ -83,13 +72,13 @@ const MenuNavbar = ({toggled, handleToggleSidebar}) => {
                 <SidebarFooter style={{ textAlign: 'center' }}>
                     <div className="sidebar-btn-wrapper">
                     <a
-                        href="https://github.com"
+                        href="https://github.com/rc4dayyan/react-portfolio"
                         target="_blank"
                         className="sidebar-btn"
                         rel="noopener noreferrer"
                     >
                         <FaGithub />
-                        <span> with love</span>
+                        <span> GitHub</span>
                     </a>
                     </div>
                 </SidebarFooter>

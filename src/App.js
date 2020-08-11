@@ -7,8 +7,9 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaBars, FaHeart } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import Works from './components/Works';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -46,15 +47,9 @@ function App() {
             {/* work */}
             <Works portfolioData={portfolioData} />
 
+            {/* Footer */}
+            <Footer />
 
-            <footer>
-                <small>
-                © 2020 made with <FaHeart style={{ color: 'red' }} /> by -{' '}
-                <a target="_blank" rel="noopener noreferrer" href="#!">
-                    me
-                </a>
-                </small>
-            </footer>
         </main>
     </div>
   );

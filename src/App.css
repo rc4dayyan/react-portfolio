@@ -13,8 +13,8 @@
   overflow-y: auto;
 }
 .img-profile {
-  max-width: 10rem;
-  max-height: 10rem;
+  max-width: 8.5rem;
+  max-height: 8.5rem;
   border: .5rem solid hsla(0,0%,100%,.2);
 }
 .social-icons .social-icon {
@@ -142,4 +142,15 @@ section.resume-section .resume-section-content {
 .pro-sidebar .pro-menu a.active{
   font-weight: 500;
   color: #dce8ef;
+}
+.img-section{
+  text-align: center;
+  padding: 0 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
