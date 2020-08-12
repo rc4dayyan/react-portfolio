@@ -32,7 +32,7 @@ const Skills = ({portfolioData}) => {
                         })
                     }
                 </ul>
-
+                
                 <div className="subheading mb-3">Workflow</div>
                 <ul className="fa-ul mb-0">
                     {

@@ -14,7 +14,7 @@ const Works = ({portfolioData}) => {
     .map((work, index)=>{
         return {
             "img": "img/work/"+work.img,
-            "desc": work.desc,
+            "desc": <div dangerouslySetInnerHTML={{__html: work.desc}} />,
             "title": work.title
         }
     })

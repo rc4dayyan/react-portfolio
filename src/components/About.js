@@ -12,9 +12,7 @@ const About = ({portfolioData}) => {
                     {portfolioData.city}, {portfolioData.country} ·
                     <a href="mailto:name@email.com">{portfolioData.email}</a>
                 </div>
-                <p className="lead mb-5">
-                    {portfolioData.aboutDescription}
-                </p>
+                <div className="lead mb-5" dangerouslySetInnerHTML={{__html: portfolioData.aboutDescription}} />
                 <div className="social-icons">
                     {
                         portfolioData.socialLinks && portfolioData.socialLinks
