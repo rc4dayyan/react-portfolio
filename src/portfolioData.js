@@ -4,7 +4,7 @@ let portfolioData = {
     "city": "Majalengka",
     "country": "Indonesia",
     "email":"youremail@email.com",
-    "aboutDescription": "Senior Web Developer specializing in back end development. Experienced with all stages of the development cycle for dynamic web projects. Well- versed in numerous programming languages including HTML5, PHP OOP, JavaScript, ReactJs, CSS, MySQL. Enthusiastic about new technology and happy to learn new technology.",
+    "aboutDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure fugit voluptates debitis culpa voluptatem. Perferendis labore inventore neque, velit provident natus quasi ea est consequuntur atque optio mollitia autem itaque.",
     "socialLinks":[
         {
           "name":"linkedin",
